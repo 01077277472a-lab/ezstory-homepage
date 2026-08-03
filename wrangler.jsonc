@@ -7,5 +7,9 @@
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
-  }
+  },
+  "routes": [
+    { "pattern": "easystory.kr", "custom_domain": true },
+    { "pattern": "www.easystory.kr", "custom_domain": true }
+  ]
 }
