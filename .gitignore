@@ -1,0 +1,17 @@
+node_modules
+.next
+out
+.env
+.env.local
+.vercel
+.DS_Store
+/data
+.open-next
+.wrangler
+cloudflare-env.d.ts
+.dev.vars
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*

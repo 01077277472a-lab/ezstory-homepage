@@ -1,0 +1,6 @@
+import type { Metadata } from "next";
+import { Mail, MessageCircle, Phone } from "lucide-react";
+import { InquiryForm } from "@/components/InquiryForm";
+import { siteConfig } from "@/data/site";
+export const metadata: Metadata = { title: "교육·컨설팅 문의" };
+export default function ContactPage() { const email = process.env.NEXT_PUBLIC_CONTACT_EMAIL || siteConfig.contactEmail; const phone = process.env.NEXT_PUBLIC_CONTACT_PHONE || siteConfig.contactPhone; const kakao = process.env.NEXT_PUBLIC_KAKAO_URL || "https://pf.kakao.com/"; return <main><section className="sub-hero"><div className="container"><span className="eyebrow">CONTACT</span><h1>교육 목적과 상황을 알려주시면<br />가장 적합한 과정을 제안합니다.</h1><p>교육주제, 시간, 일정, 대상, 추가 요구사항을 구체적으로 남길수록 정확한 검토가 가능합니다.</p></div></section><section className="section section--soft"><div className="container contact-page-grid"><div className="contact-info"><h2>빠른 문의</h2><a href={`mailto:${email}`}><Mail /><span><small>EMAIL</small>{email}</span></a><a href={`tel:${phone}`}><Phone /><span><small>PHONE</small>{phone}</span></a><a href={kakao} target="_blank" rel="noreferrer"><MessageCircle /><span><small>KAKAO</small>카카오톡 채널 문의</span></a><div className="contact-guide"><h3>문의 후 진행 절차</h3><ol><li>문의 내용 확인</li><li>유선·이메일 사전 협의</li><li>맞춤 커리큘럼·견적 제안</li><li>일정 확정 및 교육 준비</li></ol></div></div><InquiryForm /></div></section></main>; }
